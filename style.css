@@ -1,0 +1,332 @@
+body {
+    background: #0e1117;
+    color: #fafafa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+    margin: 0;
+}
+
+/* ===== ГЛАВНЫЙ КОНТЕЙНЕР (FIX ВЫЕЗДОВ) ===== */
+#app {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px 40px;
+}
+
+/* контейнер */
+.section {
+    padding: 20px 30px;
+}
+
+/* заголовки */
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 25px 0 10px;
+}
+
+/* сетка */
+.grid {
+    display: grid;
+    gap: 16px;
+}
+
+.grid.top {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.grid.bottom {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* карточки */
+.card {
+    background: #1a1c23;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+    transition: 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* KPI карточки */
+.card.big {
+    background: #111318;
+}
+
+/* текст */
+.title {
+    font-size: 13px;
+    opacity: 0.6;
+}
+
+.value {
+    font-size: 34px;
+    margin-top: 8px;
+    font-weight: 600;
+}
+
+/* строки */
+.row {
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* нарушения */
+.violation {
+    border-left: 3px solid #ef4444;
+}
+
+/* ===== ФИЛЬТРЫ (НОВЫЙ CRM СТИЛЬ) ===== */
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background: #1f2937;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 13px;
+}
+
+.checkbox-item:hover {
+    background: #374151;
+}
+
+.checkbox-item input {
+    accent-color: #ef4444;
+    cursor: pointer;
+}
+
+/* СТАРЫЕ CHIP (оставил, но можно не использовать) */
+.chip {
+  background: #ef4444;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.chip span {
+  margin-left: 6px;
+  cursor: pointer;
+}
+
+/* таблица */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  padding: 10px;
+  opacity: 0.6;
+}
+
+.table td {
+  padding: 10px;
+  border-top: 1px solid #222;
+}
+
+/* hover строки */
+.table tr:hover {
+    background: #1f2937;
+}
+
+/* кликабельность */
+.clickable {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clickable:hover {
+  transform: scale(1.05);
+}
+
+/* линия фильтров */
+.filters-line {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* селекты */
+select {
+  background: #111;
+  color: white;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #333;
+}
+
+/* кнопки */
+button {
+  background: #ef4444;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* загрузка */
+.upload-screen {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-box {
+  background: #111;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  width: 400px;
+}
+
+.upload-area {
+  display: block;
+  margin-top: 20px;
+  border: 2px dashed #333;
+  border-radius: 12px;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.upload-area:hover {
+  border-color: #3b82f6;
+}
+
+.upload-inner .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.upload-inner .text {
+  font-size: 16px;
+}
+
+.upload-inner .hint {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.file-info {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #22c55e;
+}
+
+.main-title {
+  padding: 20px;
+}
+
+.kpi-details {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+  display: flex;
+  justify-content: space-between;
+}
+
+.center {
+  text-align: center;
+}
+
+.table-wrapper {
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.card-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.stat {
+  background: #111827;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.stat small {
+  opacity: 0.7;
+  font-size: 10px;
+}
+
+.stat.done {
+  background: #062e1c;
+}
+
+/* таблица контейнер */
+.table-container {
+  max-height: 500px;
+  overflow-y: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+/* KPI вертикаль */
+.kpi-details.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.kpi-details.vertical span {
+  opacity: 0.6;
+  margin-left: 4px;
+}
+
+.kpi-details .done {
+  color: #22c55e;
+}
+
+/* ===== ГРАФИК КОМПАКТНЫЙ ===== */
+#userChart {
+  height: 220px !important;
+}
+
+.card canvas {
+  max-height: 220px;
+}
+
+/* ===== СКРОЛЛ ===== */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2a3550;
+    border-radius: 10px;
+}

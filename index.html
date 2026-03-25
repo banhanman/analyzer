@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Анализатор заявок</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ЭКРАН ЗАГРУЗКИ -->
+    <div id="uploadScreen" class="upload-screen">
+
+        <div class="upload-box">
+
+            <h1>📊 Анализатор заявок</h1>
+            <p>Загрузите Excel-файл отчета</p>
+
+            <label class="upload-area">
+                <input type="file" id="file" accept=".xlsx, .xls">
+
+                <div class="upload-inner">
+                    <div class="icon">📁</div>
+                    <div class="text">Перетащите файл сюда или нажмите</div>
+                    <div class="hint">XLSX, XLS</div>
+                </div>
+            </label>
+
+            <div id="fileInfo" class="file-info"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ОСНОВНОЕ -->
+    <div id="app" style="display:none;">
+        <h1 class="main-title">📊 Анализатор заявок</h1>
+        <div id="dashboard"></div>
+    </div>
+
+    <script src="excel.js"></script>
+    <script src="analytics.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
